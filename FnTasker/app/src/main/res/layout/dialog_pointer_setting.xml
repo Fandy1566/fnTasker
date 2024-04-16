@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/dps_tv_pointer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Edit Pointer #"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/dps_tv_pointer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/dps_tv_pointer_title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="1"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="18sp"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dps_cl_settings"
+        app:layout_constraintTop_toBottomOf="@id/dps_tv_pointer_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dps_cl_delay_setting"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dps_tv_delay_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Delay"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/dps_tv_delay_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/dps_tv_delay_title"
+                android:text="The delay before performing the next action"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/dps_et_delay"
+                app:layout_constraintTop_toBottomOf="@id/dps_tv_delay_description"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dps_cl_loop_setting"
+            app:layout_constraintTop_toBottomOf="@id/dps_cl_delay_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dps_tv_loop_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Loop"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/dps_tv_loop_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/dps_tv_loop_title"
+                android:text="The number of repetitions for the action to be looped"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/dps_et_loop"
+                app:layout_constraintTop_toBottomOf="@id/dps_tv_loop_description"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dps_cl_hold_setting"
+            app:layout_constraintTop_toBottomOf="@id/dps_cl_loop_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dps_tv_hold_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Hold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/dps_tv_hold_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/dps_tv_hold_title"
+                android:text="The duration for the touch to be held"
+                android:textSize="12sp"/>
+            <EditText
+                android:id="@+id/dps_et_hold"
+                app:layout_constraintTop_toBottomOf="@id/dps_tv_hold_description"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dps_cl_action"
+        app:layout_constraintTop_toBottomOf="@id/dps_cl_settings">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dps_cl_action_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/dps_cl_action_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:id="@+id/dps_tv_delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Delete"
+                android:textColor="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dps_cl_action_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dps_cl_action_1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dps_tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Cancel"
+                android:textColor="@color/purple_500"
+                app:layout_constraintEnd_toStartOf="@+id/dps_tv_save"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="20dp"
+                />
+
+            <TextView
+                android:id="@+id/dps_tv_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Save"
+                android:textColor="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
